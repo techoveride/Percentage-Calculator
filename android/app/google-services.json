@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "587390246813",
+    "firebase_url": "https://percentage-calculator-d9d39.firebaseio.com",
+    "project_id": "percentage-calculator-d9d39",
+    "storage_bucket": "percentage-calculator-d9d39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587390246813:android:a71910fe8374d53dfb5974",
+        "android_client_info": {
+          "package_name": "com.techoveride.percentage_calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587390246813-f7r3902ia7c4rvi8g0b9gii5ceadv8gf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd2ljhOH7SPIlyUr_i17STJlX2FptGLO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587390246813-f7r3902ia7c4rvi8g0b9gii5ceadv8gf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2165165254805026~5996187976"
+    }
+  ],
+  "configuration_version": "1"
+}
