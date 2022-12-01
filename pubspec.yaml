@@ -1,5 +1,5 @@
 name: percentage_calculator
-description: A new Flutter project.
+description: A Simple Calculator for calculating percentages,tips, etc with ease of use.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
