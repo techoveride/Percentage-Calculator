@@ -1,0 +1,29 @@
+name = "percal-ai"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Firebase project "percalculator" — App Check tokens must come from these apps.
+FIREBASE_PROJECT_NUMBER = "552365310755"
+FIREBASE_APP_IDS = "1:552365310755:android:4165313badd2a9888ac296,1:552365310755:ios:868a8595c11c8d9a8ac296"
+# Daily AI questions per install.
+FREE_DAILY = "3"
+PREMIUM_DAILY = "30"
+REWARD_BONUS = "5"
+MAX_REWARDS_PER_DAY = "2"
+# Safety cap on total questions per day across all users (protects your bill).
+GLOBAL_DAILY = "5000"
+
+# Secret (never put it here): npx wrangler secret put ANTHROPIC_API_KEY
+
+# Daily clean-up: usage counters older than 7 days are deleted.
+[triggers]
+crons = ["0 3 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "percal-ai"
+# Paste the id printed by: npx wrangler d1 create percal-ai
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"

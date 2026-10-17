@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Your last calculation and quick shortcuts</string>
+    <string name="widget_default_title">Percentage Calculator</string>
+    <string name="widget_empty">Your last calculation will appear here</string>
+    <string name="widget_btn_discount">Discount</string>
+    <string name="widget_btn_tip">Tip</string>
+</resources>

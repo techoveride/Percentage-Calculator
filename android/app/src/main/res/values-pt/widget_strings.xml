@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Seu último cálculo e atalhos rápidos</string>
+    <string name="widget_default_title">Calculadora de porcentagem</string>
+    <string name="widget_empty">Seu último cálculo aparecerá aqui</string>
+    <string name="widget_btn_discount">Desconto</string>
+    <string name="widget_btn_tip">Gorjeta</string>
+</resources>

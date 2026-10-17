@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">آخر عملية حسابية واختصارات سريعة</string>
+    <string name="widget_default_title">حاسبة النسبة المئوية</string>
+    <string name="widget_empty">ستظهر آخر عملية حسابية هنا</string>
+    <string name="widget_btn_discount">الخصم</string>
+    <string name="widget_btn_tip">الإكرامية</string>
+</resources>

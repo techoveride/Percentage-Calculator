@@ -1,0 +1,60 @@
+{
+  "parameters": {
+    "min_version_code": {
+      "defaultValue": {
+        "value": "0"
+      },
+      "description": "Builds with a lower version code (number after + in pubspec.yaml) must update: blocking dialog.",
+      "valueType": "NUMBER"
+    },
+    "latest_version_code": {
+      "defaultValue": {
+        "value": "3"
+      },
+      "description": "Builds with a lower version code are offered an optional update (asked once per release).",
+      "valueType": "NUMBER"
+    },
+    "update_message": {
+      "defaultValue": {
+        "value": ""
+      },
+      "description": "Optional custom update text. Empty = translated default. Add conditions per device language for other languages.",
+      "valueType": "STRING"
+    },
+    "update_url": {
+      "defaultValue": {
+        "value": ""
+      },
+      "description": "Optional store link for the update button. Empty = Google Play page of the app.",
+      "valueType": "STRING"
+    },
+    "ai_enabled": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Shows the AI assistant. Turn on after enabling Firebase AI Logic (see docs/AI_SETUP.md).",
+      "valueType": "BOOLEAN"
+    },
+    "ai_provider": {
+      "defaultValue": {
+        "value": "gemini"
+      },
+      "description": "gemini = free Gemini via Firebase AI Logic; worker = Claude via server/ai-worker (paid).",
+      "valueType": "STRING"
+    },
+    "ai_model": {
+      "defaultValue": {
+        "value": "gemini-3.5-flash-lite"
+      },
+      "description": "Gemini model used when ai_provider = gemini.",
+      "valueType": "STRING"
+    },
+    "ai_endpoint": {
+      "defaultValue": {
+        "value": ""
+      },
+      "description": "Worker URL used when ai_provider = worker.",
+      "valueType": "STRING"
+    }
+  }
+}

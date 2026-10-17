@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "552365310755",
+    "firebase_url": "https://percalculator.firebaseio.com",
+    "project_id": "percalculator",
+    "storage_bucket": "percalculator.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552365310755:android:b07859a75765d45a8ac296",
+        "android_client_info": {
+          "package_name": "com.techoveride.percentage_calculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4q8HRKR_Dgxr1a3obCO1X1mhyAnOKZvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552365310755:android:4165313badd2a9888ac296",
+        "android_client_info": {
+          "package_name": "com.techoveride.percentagecalculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4q8HRKR_Dgxr1a3obCO1X1mhyAnOKZvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

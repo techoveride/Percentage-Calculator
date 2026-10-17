@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Tu último cálculo y accesos rápidos</string>
+    <string name="widget_default_title">Calculadora de porcentajes</string>
+    <string name="widget_empty">Tu último cálculo aparecerá aquí</string>
+    <string name="widget_btn_discount">Descuento</string>
+    <string name="widget_btn_tip">Propina</string>
+</resources>

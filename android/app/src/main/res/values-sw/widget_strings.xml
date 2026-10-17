@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Hesabu yako ya mwisho na njia za mkato</string>
+    <string name="widget_default_title">Kikokotoo cha Asilimia</string>
+    <string name="widget_empty">Hesabu yako ya mwisho itaonekana hapa</string>
+    <string name="widget_btn_discount">Punguzo</string>
+    <string name="widget_btn_tip">Bakshishi</string>
+</resources>

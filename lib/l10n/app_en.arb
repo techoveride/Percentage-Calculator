@@ -1,0 +1,253 @@
+{
+  "@@locale": "en",
+  "appTitle": "Percentage Calculator",
+  "homeTitle": "% Calculator",
+  "menuHistory": "History",
+  "menuSettings": "Settings",
+  "menuShareApp": "Share App",
+  "menuRateApp": "Rate App",
+  "menuReportBug": "Report Bug",
+  "menuPrivacySettings": "Privacy Settings",
+  "menuPrivacyPolicy": "Privacy Policy",
+  "menuAbout": "About",
+  "menuExit": "Exit",
+  "exitTitle": "Are you sure?",
+  "exitMessage": "Do you want to exit the app?",
+  "no": "No",
+  "yes": "Yes",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "share": "Share",
+  "reset": "Reset",
+  "calculate": "Calculate",
+  "shareResultTooltip": "Share result",
+  "copied": "{label} copied",
+  "@copied": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "errorRequired": "Enter a value",
+  "errorInvalidNumber": "Enter a valid number",
+  "errorNegative": "Must not be negative",
+  "errorWholeNumber": "Enter a whole number",
+  "errorAtLeastOne": "Must be at least 1",
+  "errorBelow100": "Must be below 100%",
+  "errorNotZero": "Cannot be 0",
+  "errorPositive": "Must be greater than 0",
+  "hintExample": "e.g. {value}",
+  "@hintExample": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "resultsHeader": "Results",
+  "sharedFrom": "Calculated with Percentage Calculator",
+  "shareAppText": "I use Percentage Calculator for quick percentages, tips, discounts and more. Try it: {url}",
+  "@shareAppText": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "calcPercentageTitle": "Calculate Percentage",
+  "calcPercentageSubtitle": "Find the percentage of any number",
+  "fieldPercentage": "Percentage",
+  "fieldValue": "Value",
+  "fieldAmount": "Amount",
+  "fieldIncreaseBy": "Increase by",
+  "fieldDecreaseBy": "Decrease by",
+  "resultResult": "Result",
+  "resultIncrease": "Increase",
+  "resultDecrease": "Decrease",
+  "calcIncreaseTitle": "Percentage Increase",
+  "calcIncreaseSubtitle": "Increase a number by a percentage",
+  "calcDecreaseTitle": "Percentage Decrease",
+  "calcDecreaseSubtitle": "Decrease a number by a percentage",
+  "calcTipTitle": "Tip & Split Bill",
+  "calcTipSubtitle": "Work out the tip and split the bill",
+  "fieldBillAmount": "Bill amount",
+  "fieldPeople": "Number of people",
+  "fieldTipPercent": "Tip",
+  "resultTipAmount": "Tip amount",
+  "resultTipPerPerson": "Tip per person",
+  "resultTotalToPay": "Total to pay",
+  "resultTotalPerPerson": "Total per person",
+  "calcMarginTitle": "Profit Margin",
+  "calcMarginSubtitle": "Find the selling price for a profit margin",
+  "fieldCost": "Cost",
+  "fieldMargin": "Margin",
+  "resultPrice": "Selling price",
+  "resultProfit": "Profit",
+  "resultMarkup": "Markup",
+  "calcChangeTitle": "Percentage Change",
+  "calcChangeSubtitle": "How much a value has gone up or down",
+  "fieldInitialValue": "Initial value",
+  "fieldFinalValue": "Final value",
+  "resultPercentChange": "Percentage change",
+  "resultDifference": "Difference",
+  "calcPercentOfTitle": "What % of",
+  "calcPercentOfSubtitle": "What percentage one value is of another",
+  "fieldPart": "Value",
+  "fieldWhole": "Is what % of",
+  "calcDiscountTitle": "Discount",
+  "calcDiscountSubtitle": "Sale price and how much you save",
+  "fieldOriginalPrice": "Original price",
+  "fieldDiscount": "Discount",
+  "resultFinalPrice": "Final price",
+  "resultYouSave": "You save",
+  "calcTaxTitle": "VAT / Sales Tax",
+  "calcTaxSubtitle": "Add or remove tax from a price",
+  "fieldTaxRate": "Tax rate",
+  "resultWithTax": "Price with tax added",
+  "resultTaxAdded": "Tax added",
+  "resultWithoutTax": "Price with tax removed",
+  "resultTaxIncluded": "Tax included",
+  "calcGradeTitle": "Exam Grade",
+  "calcGradeSubtitle": "Turn your marks into a percentage",
+  "fieldScore": "Your score",
+  "fieldTotalMarks": "Total marks",
+  "resultPercentage": "Percentage",
+  "resultMarksLost": "Marks lost",
+  "calcLoanTitle": "Loan & Interest",
+  "calcLoanSubtitle": "Monthly payment and total interest",
+  "fieldLoanAmount": "Loan amount",
+  "fieldInterestRate": "Interest rate (per year)",
+  "fieldTermYears": "Term (years)",
+  "resultMonthlyPayment": "Monthly payment",
+  "resultTotalPayment": "Total payment",
+  "resultTotalInterest": "Total interest",
+  "historyTitle": "History",
+  "historyEmpty": "Your calculations will appear here.",
+  "historyClear": "Clear history",
+  "historyClearConfirm": "Delete all saved calculations?",
+  "historyDeleted": "Calculation deleted",
+  "undo": "Undo",
+  "settingsTitle": "Settings",
+  "settingsTheme": "Theme",
+  "themeSystem": "System default",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "settingsLanguage": "Language",
+  "languageSystem": "System default",
+  "aboutDescription": "Effortlessly calculate percentages, tips, discounts, taxes, grades and loans. Simple, fast and free.",
+  "aboutVersion": "Version {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "reportBugIntro": "Found a crash or a bug? Have an idea to make the app better? We'd love to hear from you — your feedback is priceless.",
+  "reportBugLabel": "Describe the problem or your idea",
+  "reportBugHint": "e.g. The app crashes when I rotate the screen",
+  "reportBugSend": "Send",
+  "reportBugNoEmail": "No email app found. Please write to {email}",
+  "@reportBugNoEmail": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "updateAvailableTitle": "Update available",
+  "updateAvailableMessage": "A new version of Percentage Calculator is available with improvements and fixes.",
+  "updateRequiredTitle": "Update required",
+  "updateRequiredMessage": "This version is no longer supported. Please update to keep using the app.",
+  "updateNow": "Update now",
+  "later": "Later",
+  "premiumTitle": "Go ad-free",
+  "premiumDescription": "One-time purchase. Removes all ads and unlocks every extra.",
+  "premiumBuy": "Remove ads – {price}",
+  "premiumActive": "You're ad-free. Thank you for your support!",
+  "restorePurchases": "Restore purchases",
+  "purchaseUnavailable": "Purchases aren't available right now.",
+  "purchaseFailed": "The purchase didn't go through. Please try again.",
+  "settingsColor": "Color",
+  "unlockColorsTitle": "Unlock all colors",
+  "unlockColorsMessage": "Watch a short video ad to unlock every color for free, or go ad-free to unlock everything.",
+  "exportTitle": "Export history",
+  "exportMessage": "Watch a short video ad to export your history as a spreadsheet (CSV), or go ad-free to export any time.",
+  "watchAd": "Watch ad",
+  "adNotReady": "No ad is available right now. Please try again in a moment.",
+  "colorsUnlocked": "All colors unlocked!",
+  "exportCsv": "Export as CSV",
+  "csvDate": "Date",
+  "csvCalculator": "Calculator",
+  "csvInputs": "Inputs",
+  "csvResults": "Results",
+  "widgetEmpty": "Your last calculation will appear here",
+  "@premiumBuy": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "featuresTitle": "Features",
+  "featCalculators": "11 calculators",
+  "featCalculatorsDesc": "Percentage, what % of, increase, decrease, change, discount, tip & split bill, VAT, profit margin, exam grade, loan & interest",
+  "featInstant": "Instant results",
+  "featInstantDesc": "Answers appear as you type. Tap to copy or share.",
+  "featHistory": "History & export",
+  "featHistoryDesc": "Every calculation is saved. Reopen it or export it as CSV.",
+  "featWidget": "Widget & shortcuts",
+  "featWidgetDesc": "See your last result on the home screen. Long-press the app icon for shortcuts.",
+  "featStyle": "Your style",
+  "featStyleDesc": "Light and dark mode with accent colours.",
+  "featLanguages": "7 languages",
+  "featPrivate": "Private",
+  "featPrivateDesc": "No account needed. Your numbers stay on your device.",
+  "featAdFree": "Ad-free option",
+  "featAdFreeDesc": "A one-time purchase removes all ads and unlocks every extra.",
+  "aiTitle": "AI assistant",
+  "aiWelcome": "Ask about your saved calculations, or type a calculation in your own words.",
+  "aiHint": "Ask or type a calculation…",
+  "aiSuggestion1": "How much have I saved with discounts?",
+  "aiSuggestion2": "15% off 2,400 plus 7.5% VAT",
+  "aiSuggestion3": "What's the average tip I gave?",
+  "aiInsightsTitle": "Insights",
+  "aiInsightsButton": "Get insights",
+  "aiInsightsEmpty": "Do a few calculations first, then come back for insights.",
+  "aiThinking": "Thinking…",
+  "aiOpenCalculator": "Open",
+  "aiStep": "Step {n}",
+  "aiReport": "Report answer",
+  "aiRemaining": "{count} AI questions left today",
+  "aiQuotaReached": "You've used today's AI questions.",
+  "aiWatchAdMore": "Watch an ad for 5 more",
+  "aiPremiumMore": "Go ad-free for 30 a day",
+  "aiConsentTitle": "Use the AI assistant?",
+  "aiConsentMessage": "To answer, your question and your saved calculations are sent to an AI service (currently Google Gemini). Nothing is sent until you ask, and no account or name is included. Please don't type personal information in your questions.",
+  "aiConsentAgree": "Agree",
+  "aiDisclaimer": "AI can make mistakes. Numbers come from the calculator, not the AI.",
+  "aiErrorGeneric": "Something went wrong. Please try again.",
+  "aiErrorOffline": "No connection. Check your internet and try again.",
+  "aiErrorBusy": "The AI assistant is busy. Please try again later.",
+  "aiErrorRefused": "The AI can't help with that request.",
+  "aiExplain": "Explain",
+  "aiExplainTitle": "How it's calculated",
+  "aiInvalidStep": "This calculation couldn't be done with those numbers.",
+  "aiBonusAdded": "5 more questions added!",
+  "@aiStep": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@aiRemaining": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "aiErrorUnavailable": "The AI assistant isn't available right now."
+}

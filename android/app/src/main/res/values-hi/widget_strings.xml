@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">आपकी पिछली गणना और त्वरित शॉर्टकट</string>
+    <string name="widget_default_title">प्रतिशत कैलकुलेटर</string>
+    <string name="widget_empty">आपकी पिछली गणना यहाँ दिखेगी</string>
+    <string name="widget_btn_discount">छूट</string>
+    <string name="widget_btn_tip">टिप</string>
+</resources>
