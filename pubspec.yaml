@@ -6,7 +6,7 @@ description: A Simple Calculator for calculating percentages, tips, etc with eas
 publish_to: 'none'
 
 # version: <versionName>+<versionCode>. Bump the build number for every Play upload.
-version: 1.0.4+5
+version: 1.0.5+6
 
 environment:
   sdk: ^3.13.0

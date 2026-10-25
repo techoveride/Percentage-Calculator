@@ -628,4 +628,27 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get aiErrorUnavailable => 'Msaidizi wa AI haupatikani kwa sasa.';
+
+  @override
+  String get menuCheckUpdates => 'Angalia masasisho';
+
+  @override
+  String updateUpToDate(String version) {
+    return 'Una toleo jipya zaidi ($version).';
+  }
+
+  @override
+  String get updateCheckFailed =>
+      'Imeshindwa kuangalia masasisho. Tafadhali jaribu tena baadaye.';
+
+  @override
+  String get adPassWatch => 'Tazama video: bila matangazo kwa saa 24';
+
+  @override
+  String adPassActive(String time) {
+    return 'Bila matangazo hadi $time';
+  }
+
+  @override
+  String get adPassGranted => 'Hakuna matangazo kwa saa 24 zijazo. Furahia!';
 }

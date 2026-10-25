@@ -249,5 +249,25 @@
       }
     }
   },
-  "aiErrorUnavailable": "The AI assistant isn't available right now."
+  "aiErrorUnavailable": "The AI assistant isn't available right now.",
+  "menuCheckUpdates": "Check for updates",
+  "updateUpToDate": "You have the latest version ({version}).",
+  "updateCheckFailed": "Couldn't check for updates. Please try again later.",
+  "adPassWatch": "Watch a video: no ads for 24 hours",
+  "adPassActive": "Ad-free until {time}",
+  "adPassGranted": "No ads for the next 24 hours. Enjoy!",
+  "@updateUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "@adPassActive": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  }
 }

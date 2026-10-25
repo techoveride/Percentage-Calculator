@@ -633,4 +633,28 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get aiErrorUnavailable =>
       'L\'assistant IA n\'est pas disponible pour le moment.';
+
+  @override
+  String get menuCheckUpdates => 'Rechercher des mises à jour';
+
+  @override
+  String updateUpToDate(String version) {
+    return 'Vous avez la dernière version ($version).';
+  }
+
+  @override
+  String get updateCheckFailed =>
+      'Impossible de vérifier les mises à jour. Réessayez plus tard.';
+
+  @override
+  String get adPassWatch => 'Regarder une vidéo : 24 h sans pub';
+
+  @override
+  String adPassActive(String time) {
+    return 'Sans publicité jusqu\'à $time';
+  }
+
+  @override
+  String get adPassGranted =>
+      'Aucune publicité pendant 24 heures. Profitez-en !';
 }

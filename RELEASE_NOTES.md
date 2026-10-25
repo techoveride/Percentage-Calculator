@@ -4,6 +4,7 @@ Package `com.techoveride.percentagecalculator` · Google Play
 
 | Version | Build | Highlights |
 |---|---|---|
+| [1.0.5](#105--build-6) | 6 | 24-hour ad-free pass, Go ad-free and Check for updates in the menu, small-screen fixes |
 | [1.0.4](#104--build-5) | 5 | AI assistant (Ask, Smart input, Explain, Insights), Features section |
 | [1.0.3](#103--build-4) | 4 | Calculator names on the home screen no longer cut off |
 | [1.0.2](#102--build-3) | 3 | New launch (splash) screen for light and dark mode |
@@ -15,6 +16,67 @@ Each version below has the text to paste into Play Console → *Release notes*
 languages that have a store listing.
 
 ---
+
+## 1.0.5 — build 6
+
+- **24-hour ad-free pass:** watch one rewarded video to hide banners and app
+  open ads for 24 hours (survives restarts; ads return when it ends).
+- Menu: **Go ad-free** (pass or one-time purchase) and **Check for updates**
+  (asks Google Play and Remote Config, says if you're up to date).
+- Small phones / larger text: Settings purchase buttons wrap instead of being
+  cut off; theme choice is a list; home cards and menu header grow with text.
+
+```
+<en-US>
+What's new
+• Watch a short video to enjoy 24 hours without ads
+• New "Go ad-free" and "Check for updates" options in the menu
+• Better layout on smaller phones and with larger text sizes
+• Small fixes and improvements
+</en-US>
+<fr-FR>
+Nouveautés
+• Regardez une courte vidéo pour profiter de 24 heures sans publicité
+• Nouvelles options « Sans publicité » et « Rechercher des mises à jour » dans le menu
+• Meilleur affichage sur les petits téléphones et avec une grande taille de texte
+• Petites corrections et améliorations
+</fr-FR>
+<sw>
+Mapya
+• Tazama video fupi ufurahie saa 24 bila matangazo
+• Chaguo mpya za "Bila matangazo" na "Angalia masasisho" kwenye menyu
+• Mpangilio bora kwenye simu ndogo na kwa maandishi makubwa
+• Marekebisho madogo na maboresho
+</sw>
+<hi-IN>
+नया क्या है
+• एक छोटा वीडियो देखें और 24 घंटे विज्ञापन-मुक्त रहें
+• मेनू में नए "विज्ञापन-मुक्त बनें" और "अपडेट जाँचें" विकल्प
+• छोटे फ़ोन और बड़े टेक्स्ट आकार पर बेहतर लेआउट
+• छोटे सुधार और बेहतरियाँ
+</hi-IN>
+<es-ES>
+Novedades
+• Mira un vídeo corto y disfruta de 24 horas sin anuncios
+• Nuevas opciones «Sin anuncios» y «Buscar actualizaciones» en el menú
+• Mejor diseño en teléfonos pequeños y con texto grande
+• Pequeñas correcciones y mejoras
+</es-ES>
+<pt-BR>
+Novidades
+• Assista a um vídeo curto e aproveite 24 horas sem anúncios
+• Novas opções "Sem anúncios" e "Verificar atualizações" no menu
+• Layout melhor em celulares menores e com texto grande
+• Pequenas correções e melhorias
+</pt-BR>
+<ar>
+الجديد
+• شاهد فيديو قصيرًا واستمتع بـ24 ساعة بدون إعلانات
+• خيارا "بدون إعلانات" و"البحث عن تحديثات" الجديدان في القائمة
+• تصميم أفضل على الهواتف الصغيرة ومع الخط الكبير
+• إصلاحات وتحسينات صغيرة
+</ar>
+```
 
 ## 1.0.4 — build 5
 

@@ -1271,6 +1271,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The AI assistant isn\'t available right now.'**
   String get aiErrorUnavailable;
+
+  /// No description provided for @menuCheckUpdates.
+  ///
+  /// In en, this message translates to:
+  /// **'Check for updates'**
+  String get menuCheckUpdates;
+
+  /// No description provided for @updateUpToDate.
+  ///
+  /// In en, this message translates to:
+  /// **'You have the latest version ({version}).'**
+  String updateUpToDate(String version);
+
+  /// No description provided for @updateCheckFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t check for updates. Please try again later.'**
+  String get updateCheckFailed;
+
+  /// No description provided for @adPassWatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Watch a video: no ads for 24 hours'**
+  String get adPassWatch;
+
+  /// No description provided for @adPassActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Ad-free until {time}'**
+  String adPassActive(String time);
+
+  /// No description provided for @adPassGranted.
+  ///
+  /// In en, this message translates to:
+  /// **'No ads for the next 24 hours. Enjoy!'**
+  String get adPassGranted;
 }
 
 class _AppLocalizationsDelegate

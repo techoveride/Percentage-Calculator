@@ -626,4 +626,27 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get aiErrorUnavailable => 'مساعد الذكاء الاصطناعي غير متاح حاليًا.';
+
+  @override
+  String get menuCheckUpdates => 'البحث عن تحديثات';
+
+  @override
+  String updateUpToDate(String version) {
+    return 'لديك أحدث إصدار ($version).';
+  }
+
+  @override
+  String get updateCheckFailed =>
+      'تعذّر البحث عن تحديثات. يُرجى المحاولة لاحقًا.';
+
+  @override
+  String get adPassWatch => 'شاهد فيديو: بدون إعلانات لمدة 24 ساعة';
+
+  @override
+  String adPassActive(String time) {
+    return 'بدون إعلانات حتى $time';
+  }
+
+  @override
+  String get adPassGranted => 'لا إعلانات خلال الـ24 ساعة القادمة. استمتع!';
 }

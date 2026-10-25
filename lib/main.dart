@@ -9,6 +9,7 @@ import 'analytics/analytics.dart';
 import 'app.dart';
 import 'firebase_options.dart';
 import 'history/history_store.dart';
+import 'premium/ad_free.dart';
 import 'premium/premium_controller.dart';
 import 'premium/unlocks.dart';
 import 'settings/settings_controller.dart';
@@ -22,6 +23,7 @@ Future<void> main() async {
     SettingsController.instance.load(),
     HistoryStore.instance.load(),
     PremiumController.instance.load(),
+    AdFreeController.instance.load(),
     Unlocks.instance.load(),
   ]);
 

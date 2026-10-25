@@ -630,4 +630,27 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get aiErrorUnavailable =>
       'El asistente de IA no está disponible en este momento.';
+
+  @override
+  String get menuCheckUpdates => 'Buscar actualizaciones';
+
+  @override
+  String updateUpToDate(String version) {
+    return 'Tienes la última versión ($version).';
+  }
+
+  @override
+  String get updateCheckFailed =>
+      'No se pudo buscar actualizaciones. Inténtalo más tarde.';
+
+  @override
+  String get adPassWatch => 'Ver un vídeo: 24 horas sin anuncios';
+
+  @override
+  String adPassActive(String time) {
+    return 'Sin anuncios hasta $time';
+  }
+
+  @override
+  String get adPassGranted => 'Sin anuncios durante 24 horas. ¡Disfruta!';
 }

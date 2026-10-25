@@ -55,6 +55,60 @@ class UpdateChecker {
     }
   }
 
+  /// "Check for updates" from the drawer: asks Google Play and Remote Config
+  /// now, and always tells the user the outcome.
+  static Future<void> checkManually(BuildContext context) async {
+    final l = AppLocalizations.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    final info = await PackageInfo.fromPlatform();
+    final build = int.tryParse(info.buildNumber) ?? 0;
+
+    // Google Play knows about every published update, even before Remote
+    // Config is raised.
+    if (defaultTargetPlatform == TargetPlatform.android && kReleaseMode) {
+      try {
+        final play = await InAppUpdate.checkForUpdate();
+        if (play.updateAvailability == UpdateAvailability.updateAvailable) {
+          if (!context.mounted) return;
+          await _showDialog(
+            context,
+            forced: false,
+            latest: play.availableVersionCode ?? build + 1,
+            customMessage: '',
+            url: '',
+          );
+          return;
+        }
+      } catch (e) {
+        debugPrint('Play update check failed: $e');
+      }
+    }
+
+    final settings = RemoteSettings.instance;
+    final fetched = await settings.refresh();
+    if (!context.mounted) return;
+    final forced = build < settings.minVersionCode;
+    if (forced || build < settings.latestVersionCode) {
+      await _showDialog(
+        context,
+        forced: forced,
+        latest: settings.latestVersionCode,
+        customMessage: settings.updateMessage,
+        url: settings.updateUrl,
+      );
+      return;
+    }
+    messenger
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(
+            fetched ? l.updateUpToDate(info.version) : l.updateCheckFailed,
+          ),
+        ),
+      );
+  }
+
   static Future<void> _showDialog(
     BuildContext context, {
     required bool forced,

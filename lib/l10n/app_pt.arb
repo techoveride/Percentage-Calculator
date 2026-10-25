@@ -193,5 +193,11 @@
   "aiExplainTitle": "Como é calculado",
   "aiInvalidStep": "Este cálculo não pode ser feito com esses números.",
   "aiBonusAdded": "Mais 5 perguntas adicionadas!",
-  "aiErrorUnavailable": "O assistente de IA não está disponível no momento."
+  "aiErrorUnavailable": "O assistente de IA não está disponível no momento.",
+  "menuCheckUpdates": "Verificar atualizações",
+  "updateUpToDate": "Você tem a versão mais recente ({version}).",
+  "updateCheckFailed": "Não foi possível verificar atualizações. Tente mais tarde.",
+  "adPassWatch": "Assistir a um vídeo: 24 horas sem anúncios",
+  "adPassActive": "Sem anúncios até {time}",
+  "adPassGranted": "Sem anúncios pelas próximas 24 horas. Aproveite!"
 }

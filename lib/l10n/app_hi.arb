@@ -193,5 +193,11 @@
   "aiExplainTitle": "यह कैसे निकाला गया",
   "aiInvalidStep": "इन संख्याओं से यह गणना नहीं हो सकती।",
   "aiBonusAdded": "5 और सवाल जोड़े गए!",
-  "aiErrorUnavailable": "AI सहायक अभी उपलब्ध नहीं है।"
+  "aiErrorUnavailable": "AI सहायक अभी उपलब्ध नहीं है।",
+  "menuCheckUpdates": "अपडेट जाँचें",
+  "updateUpToDate": "आपके पास नवीनतम संस्करण है ({version})।",
+  "updateCheckFailed": "अपडेट नहीं जाँच सके। कृपया बाद में फिर कोशिश करें।",
+  "adPassWatch": "वीडियो देखें: 24 घंटे विज्ञापन-मुक्त",
+  "adPassActive": "{time} तक विज्ञापन-मुक्त",
+  "adPassGranted": "अगले 24 घंटे कोई विज्ञापन नहीं। आनंद लें!"
 }

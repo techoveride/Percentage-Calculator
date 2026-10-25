@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
+import '../premium/ad_free.dart';
 import '../premium/premium_controller.dart';
+import '../premium/remove_ads_sheet.dart';
 import '../premium/reward_gate.dart';
 import '../premium/unlocks.dart';
 import '../util/core_methods.dart';
@@ -66,6 +68,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         listenable: Listenable.merge([
           settings,
           PremiumController.instance,
+          AdFreeController.instance,
           Unlocks.instance,
         ]),
         builder: (context, _) => ListView(
@@ -77,30 +80,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const SizedBox(height: 16),
             _Header(l.settingsTheme),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: SegmentedButton<ThemeMode>(
-                segments: [
-                  ButtonSegment(
-                    value: ThemeMode.system,
-                    icon: const Icon(Icons.brightness_auto_outlined),
-                    label: Text(l.themeSystem),
-                  ),
-                  ButtonSegment(
-                    value: ThemeMode.light,
-                    icon: const Icon(Icons.light_mode_outlined),
-                    label: Text(l.themeLight),
-                  ),
-                  ButtonSegment(
-                    value: ThemeMode.dark,
-                    icon: const Icon(Icons.dark_mode_outlined),
-                    label: Text(l.themeDark),
-                  ),
-                ],
-                selected: {settings.themeMode},
-                onSelectionChanged: (s) => settings.setThemeMode(s.first),
+            for (final (mode, icon, label) in [
+              (ThemeMode.system, Icons.brightness_auto_outlined, l.themeSystem),
+              (ThemeMode.light, Icons.light_mode_outlined, l.themeLight),
+              (ThemeMode.dark, Icons.dark_mode_outlined, l.themeDark),
+            ])
+              _ChoiceTile(
+                icon: icon,
+                title: label,
+                selected: settings.themeMode == mode,
+                onTap: () => settings.setThemeMode(mode),
               ),
-            ),
             _Header(l.settingsColor),
             Padding(
               padding: const EdgeInsets.all(16),
@@ -120,13 +110,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             const Divider(),
             _Header(l.settingsLanguage, style: text.titleSmall),
-            _LanguageTile(
+            _ChoiceTile(
               title: l.languageSystem,
               selected: settings.locale == null,
               onTap: () => settings.setLocale(null),
             ),
             for (final entry in appLanguages.entries)
-              _LanguageTile(
+              _ChoiceTile(
                 title: entry.value,
                 selected: settings.locale?.languageCode == entry.key,
                 onTap: () => settings.setLocale(Locale(entry.key)),
@@ -161,78 +151,14 @@ class _PremiumCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l = AppLocalizations.of(context);
-    final premium = PremiumController.instance;
     final scheme = Theme.of(context).colorScheme;
-    final text = Theme.of(context).textTheme;
-
-    if (premium.isPremium) {
-      return Card(
-        color: scheme.tertiaryContainer,
-        child: ListTile(
-          leading: Icon(Icons.verified, color: scheme.onTertiaryContainer),
-          title: Text(
-            l.premiumActive,
-            style: TextStyle(color: scheme.onTertiaryContainer),
-          ),
-        ),
-      );
-    }
-
-    final price = premium.price;
     return Card(
-      color: scheme.secondaryContainer,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.block, color: scheme.onSecondaryContainer),
-                const SizedBox(width: 8),
-                Text(
-                  l.premiumTitle,
-                  style: text.titleMedium?.copyWith(
-                    color: scheme.onSecondaryContainer,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text(
-              l.premiumDescription,
-              style: TextStyle(color: scheme.onSecondaryContainer),
-            ),
-            const SizedBox(height: 12),
-            if (price == null)
-              Text(
-                l.purchaseUnavailable,
-                style: text.bodySmall?.copyWith(
-                  color: scheme.onSecondaryContainer,
-                ),
-              )
-            else
-              Row(
-                children: [
-                  FilledButton(
-                    onPressed: premium.purchasePending ? null : premium.buy,
-                    child: premium.purchasePending
-                        ? const SizedBox.square(
-                            dimension: 18,
-                            child: CircularProgressIndicator(strokeWidth: 2),
-                          )
-                        : Text(l.premiumBuy(price)),
-                  ),
-                  const SizedBox(width: 8),
-                  TextButton(
-                    onPressed: premium.restore,
-                    child: Text(l.restorePurchases),
-                  ),
-                ],
-              ),
-          ],
-        ),
+      color: PremiumController.instance.isPremium
+          ? scheme.tertiaryContainer
+          : scheme.secondaryContainer,
+      child: const Padding(
+        padding: EdgeInsets.all(16),
+        child: RemoveAdsOptions(onPrimaryContainer: true),
       ),
     );
   }
@@ -275,20 +201,23 @@ class _ColorSwatch extends StatelessWidget {
   }
 }
 
-class _LanguageTile extends StatelessWidget {
-  const _LanguageTile({
+class _ChoiceTile extends StatelessWidget {
+  const _ChoiceTile({
     required this.title,
     required this.selected,
     required this.onTap,
+    this.icon,
   });
 
   final String title;
   final bool selected;
   final VoidCallback onTap;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      leading: icon == null ? null : Icon(icon),
       title: Text(title),
       trailing: selected
           ? Icon(Icons.check, color: Theme.of(context).colorScheme.primary)

@@ -193,5 +193,11 @@
   "aiExplainTitle": "طريقة الحساب",
   "aiInvalidStep": "لا يمكن إجراء هذه العملية بهذه الأرقام.",
   "aiBonusAdded": "تمت إضافة 5 أسئلة أخرى!",
-  "aiErrorUnavailable": "مساعد الذكاء الاصطناعي غير متاح حاليًا."
+  "aiErrorUnavailable": "مساعد الذكاء الاصطناعي غير متاح حاليًا.",
+  "menuCheckUpdates": "البحث عن تحديثات",
+  "updateUpToDate": "لديك أحدث إصدار ({version}).",
+  "updateCheckFailed": "تعذّر البحث عن تحديثات. يُرجى المحاولة لاحقًا.",
+  "adPassWatch": "شاهد فيديو: بدون إعلانات لمدة 24 ساعة",
+  "adPassActive": "بدون إعلانات حتى {time}",
+  "adPassGranted": "لا إعلانات خلال الـ24 ساعة القادمة. استمتع!"
 }

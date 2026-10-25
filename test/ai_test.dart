@@ -306,7 +306,9 @@ void main() {
         AiErrorCode.unavailable,
       );
       expect(
-        await codeFor((_, _) async => geminiTurn([const TextPart('no tool call')])),
+        await codeFor(
+          (_, _) async => geminiTurn([const TextPart('no tool call')]),
+        ),
         AiErrorCode.generic,
       );
     });

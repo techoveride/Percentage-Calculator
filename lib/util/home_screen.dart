@@ -13,6 +13,8 @@ import '../launch/home_widget_service.dart';
 import '../model/about.dart';
 import '../model/calculator_definition.dart';
 import '../model/report_bug.dart';
+import '../premium/premium_controller.dart';
+import '../premium/remove_ads_sheet.dart';
 import '../settings/settings_screen.dart';
 import '../update/update_checker.dart';
 import '../widgets/calculator_page.dart';
@@ -50,6 +52,12 @@ class _HomeScreenState extends State<HomeScreen> {
       AppLaunch.updateShortcuts(l);
       HomeWidgetService.updateLabels(l);
     }
+  }
+
+  /// Padding + icon (fixed) plus title and subtitle lines (scale with text).
+  static double _cardHeight(BuildContext context) {
+    final scaled = MediaQuery.textScalerOf(context).scale(88);
+    return (92 + scaled).clamp(180, 400).toDouble();
   }
 
   void _openHistory() {
@@ -95,9 +103,11 @@ class _HomeScreenState extends State<HomeScreen> {
           top: false,
           child: GridView.builder(
             padding: const EdgeInsets.all(16),
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 260,
-              mainAxisExtent: 180, // room for 2-line titles (long translations)
+              // Room for a 2-line title and 2-line subtitle, growing with the
+              // phone's text size so larger fonts never overflow the card.
+              mainAxisExtent: _cardHeight(context),
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
             ),
@@ -122,11 +132,19 @@ class _HomeScreenState extends State<HomeScreen> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
-            decoration: BoxDecoration(color: scheme.primaryContainer),
+          // Sized by its content (DrawerHeader has a fixed height that
+          // overflows on narrow phones and with larger text).
+          Container(
+            color: scheme.primaryContainer,
+            padding: EdgeInsets.fromLTRB(
+              16,
+              MediaQuery.paddingOf(context).top + 16,
+              16,
+              16,
+            ),
+            margin: const EdgeInsets.only(bottom: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 CircleAvatar(
                   radius: 30,
@@ -165,6 +183,16 @@ class _HomeScreenState extends State<HomeScreen> {
             l.menuSettings,
             () => _open(const SettingsScreen()),
           ),
+          ListenableBuilder(
+            listenable: PremiumController.instance,
+            builder: (_, _) => PremiumController.instance.isPremium
+                ? const SizedBox.shrink()
+                : _drawerItem(
+                    Icons.block,
+                    l.premiumTitle,
+                    () => showRemoveAdsSheet(context),
+                  ),
+          ),
           const Divider(),
           _drawerItem(Icons.share_outlined, l.menuShareApp, () {
             Analytics.shareApp();
@@ -193,6 +221,11 @@ class _HomeScreenState extends State<HomeScreen> {
               l.menuPrivacyPolicy,
               AppLinks.openPrivacyPolicy,
             ),
+          _drawerItem(
+            Icons.system_update_outlined,
+            l.menuCheckUpdates,
+            () => UpdateChecker.checkManually(context),
+          ),
           _drawerItem(
             Icons.info_outline,
             l.menuAbout,

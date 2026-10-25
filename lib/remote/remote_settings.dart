@@ -38,6 +38,28 @@ class RemoteSettings {
   /// false if Firebase isn't available.
   Future<bool> fetch() => _fetch ??= _doFetch();
 
+  /// Fetches the newest values now, ignoring the usual 1-hour cache (for a
+  /// "Check for updates" tap). Returns false if Firebase is unavailable or
+  /// the fetch failed; the previous values stay active.
+  Future<bool> refresh() async {
+    if (Firebase.apps.isEmpty) return false;
+    await fetch(); // defaults + settings
+    try {
+      final config = FirebaseRemoteConfig.instance;
+      await config.setConfigSettings(
+        RemoteConfigSettings(
+          fetchTimeout: const Duration(seconds: 10),
+          minimumFetchInterval: Duration.zero,
+        ),
+      );
+      await config.fetchAndActivate();
+      return true;
+    } catch (e) {
+      debugPrint('Remote Config refresh failed: $e');
+      return false;
+    }
+  }
+
   Future<bool> _doFetch() async {
     if (Firebase.apps.isEmpty) return false;
     try {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-import '../premium/premium_controller.dart';
+import '../premium/ad_free.dart';
 import 'ad_config.dart';
 import 'ads_controller.dart';
 
@@ -25,7 +25,7 @@ class _AnchoredAdaptiveAdState extends State<AnchoredAdaptiveAd> {
   void initState() {
     super.initState();
     AdsController.instance.adsReady.addListener(_maybeLoad);
-    PremiumController.instance.addListener(_onPremiumChanged);
+    AdFreeController.instance.addListener(_onAdFreeChanged);
   }
 
   @override
@@ -37,25 +37,33 @@ class _AnchoredAdaptiveAdState extends State<AnchoredAdaptiveAd> {
   @override
   void dispose() {
     AdsController.instance.adsReady.removeListener(_maybeLoad);
-    PremiumController.instance.removeListener(_onPremiumChanged);
+    AdFreeController.instance.removeListener(_onAdFreeChanged);
     _bannerAd?.dispose();
     super.dispose();
   }
 
-  /// Removes the banner the moment "remove ads" is bought or restored.
-  void _onPremiumChanged() {
-    if (!PremiumController.instance.isPremium || _bannerAd == null) return;
+  /// Hides the banner the moment the user goes ad-free (purchase or 24-hour
+  /// pass) and brings it back when a pass runs out.
+  void _onAdFreeChanged() {
+    if (!mounted) return;
+    if (!AdFreeController.instance.active) {
+      _requestedWidth = null;
+      _maybeLoad();
+      return;
+    }
+    if (_bannerAd == null) return;
     _bannerAd?.dispose();
     setState(() {
       _bannerAd = null;
       _isLoaded = false;
+      _requestedWidth = null;
     });
   }
 
   void _maybeLoad() {
     if (!mounted ||
         !AdsController.instance.adsReady.value ||
-        PremiumController.instance.isPremium) {
+        AdFreeController.instance.active) {
       return;
     }
     // Depend on the screen size only (not insets/padding, which change often

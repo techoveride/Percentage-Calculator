@@ -627,4 +627,27 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get aiErrorUnavailable => 'AI सहायक अभी उपलब्ध नहीं है।';
+
+  @override
+  String get menuCheckUpdates => 'अपडेट जाँचें';
+
+  @override
+  String updateUpToDate(String version) {
+    return 'आपके पास नवीनतम संस्करण है ($version)।';
+  }
+
+  @override
+  String get updateCheckFailed =>
+      'अपडेट नहीं जाँच सके। कृपया बाद में फिर कोशिश करें।';
+
+  @override
+  String get adPassWatch => 'वीडियो देखें: 24 घंटे विज्ञापन-मुक्त';
+
+  @override
+  String adPassActive(String time) {
+    return '$time तक विज्ञापन-मुक्त';
+  }
+
+  @override
+  String get adPassGranted => 'अगले 24 घंटे कोई विज्ञापन नहीं। आनंद लें!';
 }

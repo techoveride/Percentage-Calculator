@@ -193,5 +193,11 @@
   "aiExplainTitle": "Jinsi inavyokokotolewa",
   "aiInvalidStep": "Hesabu hii haiwezi kufanyika kwa namba hizo.",
   "aiBonusAdded": "Maswali 5 zaidi yameongezwa!",
-  "aiErrorUnavailable": "Msaidizi wa AI haupatikani kwa sasa."
+  "aiErrorUnavailable": "Msaidizi wa AI haupatikani kwa sasa.",
+  "menuCheckUpdates": "Angalia masasisho",
+  "updateUpToDate": "Una toleo jipya zaidi ({version}).",
+  "updateCheckFailed": "Imeshindwa kuangalia masasisho. Tafadhali jaribu tena baadaye.",
+  "adPassWatch": "Tazama video: bila matangazo kwa saa 24",
+  "adPassActive": "Bila matangazo hadi {time}",
+  "adPassGranted": "Hakuna matangazo kwa saa 24 zijazo. Furahia!"
 }

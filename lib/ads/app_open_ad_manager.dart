@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-import '../premium/premium_controller.dart';
+import '../premium/ad_free.dart';
 import 'ad_config.dart';
 
 /// Loads and shows app open ads, following Google's guidance:
@@ -46,7 +46,7 @@ class AppOpenAdManager {
         adUnitId == null ||
         _isLoading ||
         isAdAvailable ||
-        PremiumController.instance.isPremium) {
+        AdFreeController.instance.active) {
       return;
     }
     _isLoading = true;
@@ -102,7 +102,7 @@ class AppOpenAdManager {
   }
 
   void showAdIfAvailable() {
-    if (!_enabled || _isShowingAd || PremiumController.instance.isPremium) {
+    if (!_enabled || _isShowingAd || AdFreeController.instance.active) {
       return;
     }
     if (!isAdAvailable) {

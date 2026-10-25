@@ -36,7 +36,15 @@ class PremiumController extends ChangeNotifier {
   bool get purchasePending => _purchasePending;
 
   /// Localized price from the store, e.g. "₦1,500.00" or "$2.99".
-  String? get price => _product?.price;
+  String? get price => _debugPrice ?? _product?.price;
+  String? _debugPrice;
+
+  /// For tests and screenshots: pretend the store returned [value].
+  @visibleForTesting
+  void debugSetPrice(String? value) {
+    _debugPrice = value;
+    notifyListeners();
+  }
 
   /// Reads the saved entitlement. Call before `runApp` so no ad flashes for
   /// people who already bought.
