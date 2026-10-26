@@ -4,6 +4,7 @@ Package `com.techoveride.percentagecalculator` · Google Play
 
 | Version | Build | Highlights |
 |---|---|---|
+| [1.0.6](#106--build-7) | 7 | Padded app icon, themed (Android 13+) icon |
 | [1.0.5](#105--build-6) | 6 | 24-hour ad-free pass, Go ad-free and Check for updates in the menu, small-screen fixes |
 | [1.0.4](#104--build-5) | 5 | AI assistant (Ask, Smart input, Explain, Insights), Features section |
 | [1.0.3](#103--build-4) | 4 | Calculator names on the home screen no longer cut off |
@@ -16,6 +17,58 @@ Each version below has the text to paste into Play Console → *Release notes*
 languages that have a store listing.
 
 ---
+
+## 1.0.6 — build 7
+
+- New launcher icon: the logo sits inside the launcher's circle/squircle with
+  white padding instead of being cropped (adaptive foreground at 40% of the
+  layer, inset 0). Android 7 and iOS get a padded white tile.
+- Android 13+ themed icons: monochrome % layer the system tints.
+
+```
+<en-US>
+What's new
+• Refreshed app icon that fits neatly on your home screen
+• Supports themed icons on Android 13 and newer
+• Small fixes and improvements
+</en-US>
+<fr-FR>
+Nouveautés
+• Icône de l'application repensée, mieux adaptée à votre écran d'accueil
+• Prise en charge des icônes à thème sur Android 13 et versions ultérieures
+• Petites corrections et améliorations
+</fr-FR>
+<sw>
+Mapya
+• Aikoni mpya ya programu inayokaa vizuri kwenye skrini yako ya mwanzo
+• Inatumia aikoni zenye mandhari kwenye Android 13 na matoleo mapya
+• Marekebisho madogo na maboresho
+</sw>
+<hi-IN>
+नया क्या है
+• नया ऐप आइकन जो आपकी होम स्क्रीन पर अच्छी तरह फ़िट होता है
+• Android 13 और नए वर्ज़न पर थीम वाले आइकन का समर्थन
+• छोटे सुधार और बेहतरियाँ
+</hi-IN>
+<es-ES>
+Novedades
+• Icono de la aplicación renovado que encaja mejor en tu pantalla de inicio
+• Compatible con iconos temáticos en Android 13 y versiones posteriores
+• Pequeñas correcciones y mejoras
+</es-ES>
+<pt-BR>
+Novidades
+• Ícone do app renovado que se encaixa melhor na sua tela inicial
+• Suporte a ícones com tema no Android 13 e versões mais recentes
+• Pequenas correções e melhorias
+</pt-BR>
+<ar>
+الجديد
+• أيقونة تطبيق جديدة تتناسب بشكل أنيق مع شاشتك الرئيسية
+• دعم الأيقونات ذات السمات على Android 13 والإصدارات الأحدث
+• إصلاحات وتحسينات صغيرة
+</ar>
+```
 
 ## 1.0.5 — build 6
 

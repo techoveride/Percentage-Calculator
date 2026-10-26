@@ -6,7 +6,7 @@ description: A Simple Calculator for calculating percentages, tips, etc with eas
 publish_to: 'none'
 
 # version: <versionName>+<versionCode>. Bump the build number for every Play upload.
-version: 1.0.5+6
+version: 1.0.6+7
 
 environment:
   sdk: ^3.13.0
@@ -49,9 +49,15 @@ flutter_launcher_icons:
   android: true
   ios: true
   remove_alpha_ios: true
-  image_path: "images/logo.png"
+  # iOS and Android 7 and older: white tile with the padded logo.
+  image_path: "images/ic_launcher_square.png"
+  # Android 8+: launchers show only the middle ~66% of these layers, so the
+  # logo sits at 40% of the layer to look padded (see design/launcher_icon).
   adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "images/logo.png"
+  adaptive_icon_foreground: "images/ic_launcher_foreground.png"
+  adaptive_icon_foreground_inset: 0
+  # Android 13+ themed icons (tinted by the system).
+  adaptive_icon_monochrome: "images/ic_launcher_monochrome.png"
 
 # dart run flutter_native_splash:create
 # Design C from design/splash/ (gradient % on white; near-black in dark mode).
